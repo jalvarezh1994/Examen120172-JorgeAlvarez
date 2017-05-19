@@ -1,6 +1,6 @@
 #include "Literatura.h"
 
-Literatura::Literatura(string Genero,string Epoca){
+Literatura::Literatura(string ID,string Nombre,string Autor,string FechaDeIngreso,string Genero,string Epoca){
     this->Genero=Genero;
     this->Epoca=Epoca;
 }

@@ -1,6 +1,6 @@
 #include "Escultura.h"
 
-Escultura::Escultura(double Peso,string Material){
+Escultura::Escultura(string ID,string Nombre,string Autor,string FechaDeIngreso,double Peso,string Material){
     this->Peso=Peso;
     this->Material=Material;
 }

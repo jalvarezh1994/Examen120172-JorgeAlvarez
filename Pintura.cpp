@@ -1,6 +1,6 @@
 #include "Pintura.h"
 
-Pintura::Pintura(string MaterialLienzo,string Tecnica){
+Pintura::Pintura(string ID,string Nombre,string Autor,string FechaDeIngreso,string MaterialLienzo,string Tecnica){
     this->MaterialLienzo=MaterialLienzo;
     this->Tecnica=Tecnica;
 }
