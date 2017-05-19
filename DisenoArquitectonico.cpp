@@ -5,7 +5,8 @@ DisenoArquitectonico::DisenoArquitectonico(string TipoTerreno){
 }
 DisenoArquitectonico::DisenoArquitectonico(){
 
-}void DisenoArquitectonico::setTipoTerreno(string TipoTerreno){
+}
+void DisenoArquitectonico::setTipoTerreno(string TipoTerreno){
    this-> TipoTerreno=TipoTerreno;
 }
 string DisenoArquitectonico::getTipoTerreno(){

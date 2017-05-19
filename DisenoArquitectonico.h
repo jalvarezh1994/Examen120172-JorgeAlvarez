@@ -6,6 +6,7 @@ using namespace std;
 
 #ifndef DISENOARQUITECTONICO_H
 #define DISENOARQUITECTONICO_H
+
 class DisenoArquitectonico:public Arte{
     protected:
         string TipoTerreno;
@@ -16,4 +17,5 @@ class DisenoArquitectonico:public Arte{
         void setTipoTerreno(string);
 
 };
+
 #endif
