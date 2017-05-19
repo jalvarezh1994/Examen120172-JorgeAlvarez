@@ -3,6 +3,10 @@
 Escultura::Escultura(string ID,string Nombre,string Autor,string FechaDeIngreso,double Peso,string Material){
     this->Peso=Peso;
     this->Material=Material;
+    this->ID=ID;
+    this->Nombre=Nombre;
+    this->Autor=Autor;
+    this->FechaDeIngreso=FechaDeIngreso;
 }
 Escultura::Escultura(){
 

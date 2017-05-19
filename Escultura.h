@@ -10,7 +10,7 @@ class Escultura:public Arte{
         double Peso;
         string Material;
     public:
-        Escultura(double,string);
+        Escultura(string,string,string,string,double,string);
         Escultura();
         double getPeso();
         void setPeso(double);

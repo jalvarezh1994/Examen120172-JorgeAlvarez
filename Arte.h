@@ -14,6 +14,7 @@ class Arte{
     public:
         Arte(string,string,string,string);
         Arte();
+
         string getID();
         void setID(string);
 

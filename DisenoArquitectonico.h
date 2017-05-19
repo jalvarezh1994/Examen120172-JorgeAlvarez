@@ -11,7 +11,7 @@ class DisenoArquitectonico:public Arte{
     protected:
         string TipoTerreno;
     public:
-        DisenoArquitectonico(string);
+        DisenoArquitectonico(string,string,string,string,string);
         DisenoArquitectonico();
         string getTipoTerreno();
         void setTipoTerreno(string);

@@ -11,7 +11,7 @@ class Pintura:public Arte{
         string MaterialLienzo;
         string Tecnica;
     public:
-        Pintura(string,string);
+        Pintura(string,string,string,string,string,string);
         Pintura();
         string getMaterialLienzo();
         void setMaterialLienzo(string);

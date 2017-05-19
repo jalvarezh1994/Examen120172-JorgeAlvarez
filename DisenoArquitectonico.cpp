@@ -1,6 +1,6 @@
 #include "DisenoArquitectonico.h"
 
-DisenoArquitectonico::DisenoArquitectonico(tring ID,string Nombre,string Autor,string FechaDeIngreso,tring TipoTerreno){
+DisenoArquitectonico::DisenoArquitectonico(string ID,string Nombre,string Autor,string FechaDeIngreso,string TipoTerreno){
     this->TipoTerreno=TipoTerreno;
     this->ID=ID;
     this->Nombre=Nombre;

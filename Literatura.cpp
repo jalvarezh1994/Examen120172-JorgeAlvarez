@@ -3,6 +3,10 @@
 Literatura::Literatura(string ID,string Nombre,string Autor,string FechaDeIngreso,string Genero,string Epoca){
     this->Genero=Genero;
     this->Epoca=Epoca;
+    this->ID=ID;
+    this->Nombre=Nombre;
+    this->Autor=Autor;
+    this->FechaDeIngreso=FechaDeIngreso;
 }
 Literatura::Literatura(){
 
