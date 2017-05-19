@@ -6,7 +6,7 @@ using namespace std;
 #ifndef ESCULTURA_H
 #define ESCULTURA_H
 class Escultura:public Arte{
-    protected:
+    private:
         double Peso;
         string Material;
     public:
@@ -14,9 +14,7 @@ class Escultura:public Arte{
         Escultura();
         double getPeso();
         void setPeso(double);
-
         string getMaterial();
         void setMaterial(string);
-
 };
 #endif

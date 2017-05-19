@@ -29,6 +29,7 @@ int main(){
 		cout<<"5. Transferir"<<endl;
 		cout<<"6. Filtrar"<<endl;
 		cout<<"7. Salir"<<endl;
+		cout<<"Ingrese la opción: "<<endl;
 		cin>>opc;
 		switch(opc){
 			case 1:{
@@ -141,7 +142,7 @@ int main(){
 				string listar="";
 				for(int i=0;i<Museo.size();i++){
 					Arte a=Museo[i];
-					listar+=i+". "+a.getID()+","+a.getNombre()+","+a.getAutor()+","+a.getFechaDeIngreso()+"\n";
+					listar+=to_string(i)+". "+a.getID()+","+a.getNombre()+","+a.getAutor()+","+a.getFechaDeIngreso()+"\n";
 				}
 				cout<<endl<<listar<<endl;
 				break;
@@ -150,14 +151,14 @@ int main(){
 				string listar="";
 				for(int i=0;i<Transferidos.size();i++){
 					Arte a=Transferidos[i];
-					listar+=i+". "+a.getID()+","+a.getNombre()+","+a.getAutor()+","+a.getFechaDeIngreso()+"\n";
+					listar+=to_string(i)+". "+a.getID()+","+a.getNombre()+","+a.getAutor()+","+a.getFechaDeIngreso()+"\n";
 				}
 				cout<<endl<<listar<<endl;
 				break;			
 			}
 			case 5:{
 				int pos;
-				cout<<"Ingrese la posición de la obra que desea transferir"<<endl;
+				cout<<"Ingrese la posición de la obra que desea transferir: ";
 				cin>>pos;
 				Transferidos.push_back(Museo[pos]);
 				Museo.erase(Museo.begin()+pos);
@@ -169,8 +170,11 @@ int main(){
 				cin>>autor;
 				filtrar(Museo,autor);
 			}
+			case 7:{
+				break;			
+			}
 		}
-	}while(opc!=6);
+	}while(opc!=7);
 	return 0;
 }
 

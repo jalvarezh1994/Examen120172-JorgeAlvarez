@@ -7,7 +7,7 @@ using namespace std;
 #ifndef LITERATURA_H
 #define LITERATURA_H
 class Literatura: public Arte{
-    protected:
+    private:
         string Genero;
         string Epoca;
     public:
@@ -15,9 +15,7 @@ class Literatura: public Arte{
         Literatura();
         string getGenero();
         void setGenero(string);
-
         string getEpoca();
         void setEpoca(string);
-
 };
 #endif

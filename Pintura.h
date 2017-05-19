@@ -7,7 +7,7 @@ using namespace std;
 #ifndef PINTURA_H
 #define PINTURA_H
 class Pintura:public Arte{
-    protected:
+    private:
         string MaterialLienzo;
         string Tecnica;
     public:
@@ -15,9 +15,7 @@ class Pintura:public Arte{
         Pintura();
         string getMaterialLienzo();
         void setMaterialLienzo(string);
-
         string getTecnica();
         void setTecnica(string);
-
 };
 #endif

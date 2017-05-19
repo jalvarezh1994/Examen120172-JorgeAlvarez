@@ -4,7 +4,7 @@ Examen: main.o Arte.o Literatura.o Escultura.o Pintura.o DisenoArquitectonico.o
 main.o: main.cpp Arte.h Literatura.h Escultura.h Pintura.h DisenoArquitectonico.h 
 	g++ -c main.cpp
 
-Arte.o: Arte.cpp Arte.o
+Arte.o: Arte.cpp Arte.h
 	g++ -c Arte.cpp
 
 Literatura.o: Literatura.cpp Literatura.h Arte.h

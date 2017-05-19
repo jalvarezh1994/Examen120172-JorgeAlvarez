@@ -1,5 +1,9 @@
 #include "Pintura.h"
 
+Pintura::Pintura(){
+
+}
+
 Pintura::Pintura(string ID,string Nombre,string Autor,string FechaDeIngreso,string MaterialLienzo,string Tecnica){
     this->MaterialLienzo=MaterialLienzo;
     this->Tecnica=Tecnica;
@@ -7,10 +11,6 @@ Pintura::Pintura(string ID,string Nombre,string Autor,string FechaDeIngreso,stri
     this->Nombre=Nombre;
     this->Autor=Autor;
     this->FechaDeIngreso=FechaDeIngreso;
-}
-
-Pintura::Pintura(){
-
 }
 
 void Pintura::setMaterialLienzo(string MaterialLienzo){

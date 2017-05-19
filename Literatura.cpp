@@ -1,5 +1,9 @@
 #include "Literatura.h"
 
+Literatura::Literatura(){
+
+}
+
 Literatura::Literatura(string ID,string Nombre,string Autor,string FechaDeIngreso,string Genero,string Epoca){
     this->Genero=Genero;
     this->Epoca=Epoca;
@@ -8,17 +12,19 @@ Literatura::Literatura(string ID,string Nombre,string Autor,string FechaDeIngres
     this->Autor=Autor;
     this->FechaDeIngreso=FechaDeIngreso;
 }
-Literatura::Literatura(){
 
-}void Literatura::setGenero(string Genero){
+void Literatura::setGenero(string Genero){
    this-> Genero=Genero;
 }
+
 string Literatura::getGenero(){
    return Genero;
 }
+
 void Literatura::setEpoca(string Epoca){
    this-> Epoca=Epoca;
 }
+
 string Literatura::getEpoca(){
    return Epoca;
 }

@@ -8,14 +8,13 @@ using namespace std;
 #define DISENOARQUITECTONICO_H
 
 class DisenoArquitectonico:public Arte{
-    protected:
+    private:
         string TipoTerreno;
     public:
         DisenoArquitectonico(string,string,string,string,string);
         DisenoArquitectonico();
         string getTipoTerreno();
         void setTipoTerreno(string);
-
 };
 
 #endif

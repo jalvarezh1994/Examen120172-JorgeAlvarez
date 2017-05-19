@@ -14,18 +14,13 @@ class Arte{
     public:
         Arte(string,string,string,string);
         Arte();
-
         string getID();
         void setID(string);
-
         string getNombre();
         void setNombre(string);
-
         string getAutor();
         void setAutor(string);
-
         string getFechaDeIngreso();
         void setFechaDeIngreso(string);
-
 };
 #endif
