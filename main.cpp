@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <stdlib.h>
 #include "Arte.h"
 #include "Literatura.h"
 #include "Escultura.h"
@@ -24,6 +25,9 @@ int main(){
 		cout<<"2. Eliminar"<<endl;
 		cout<<"3. Listar"<<endl;
 		cout<<"4. Listar transferidos"<<endl;
+		cout<<"5. Transferir"<<endl;
+		cout<<"6. Filtrar"<<endl;
+		cout<<"7. Salir"<<endl;
 		cin>>opc;
 		switch(opc){
 			case 1:{
@@ -123,22 +127,73 @@ int main(){
 				int posicion;				
 				cout<<"Seleccione la obra de arte que desea eliminar: ";
 				cin>>posicion;
-				if(posicion>0&&posicion<Museo.size())
+				if(posicion>0&&posicion<Museo.size()){
 					Museo.erase(Museo.begin()+posicion);
+					cout<<"Eliminado exitosamente"<<endl;
+				}
+				else{
+					cout<<"No existe la posición"<<endl;
+				}
+				break;
 			}
 			case 3:{
 				string listar="";
 				for(int i=0;i<Museo.size();i++){
 					Arte a=Museo[i];
-					listar+=i+". "+a.getID()+","+a.getNombre()+","+a.getAutor()+","+a.getFechaDeIngreso();
+					listar+=i+". "+a.getID()+","+a.getNombre()+","+a.getAutor()+","+a.getFechaDeIngreso()+"\n";
 				}
+				cout<<endl<<listar<<endl;
+				break;
+			}
+			case 4:{
+				string listar="";
+				for(int i=0;i<Transferidos.size();i++){
+					Arte a=Transferidos[i];
+					listar+=i+". "+a.getID()+","+a.getNombre()+","+a.getAutor()+","+a.getFechaDeIngreso()+"\n";
+				}
+				cout<<endl<<listar<<endl;
+				break;			
+			}
+			case 5:{
+				int pos;
+				cout<<"Ingrese la posición de la obra que desea transferir"<<endl;
+				cin>>pos;
+				Transferidos.push_back(Museo[pos]);
+				Museo.erase(Museo.begin()+pos);
+				break;
+			}
+			case 6:{
+				cout<<"Usted ha salido"<<endl;
 			}
 		}
-	}while(opc==5);
-
+	}while(opc!=6);
 	return 0;
 }
 
 string generaId(vector<Arte> a){
-	return "";
+	char hexadecimales[16]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+	char caracter;
+	string id="";	
+       	int a;
+	for(int i=0;i<6;i++){
+		a=rand()%16;
+		caracter=hexadecimales[a];
+		id+=a;
+	}
+	bool existeId=false;
+	for(int i=0;i<a.end();i++){
+		if(a[i].getID().compare(id)==0){
+			
+		}
+	}
+	return id;
+}
+
+void filtrar(vector<Arte> a,string autor){
+	Arte arte;
+	for(int i=0;i<a.end();i++){
+		if(a[i].getAutor().compare(autor)==0){
+			cout<<
+		}
+	}
 }
