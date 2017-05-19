@@ -12,6 +12,7 @@
 using namespace std;
 
 string generaId(vector<Arte>);
+void filtrar(vector<Arte>,string);
 
 int main(){
 	vector<Arte> Museo;
@@ -163,7 +164,10 @@ int main(){
 				break;
 			}
 			case 6:{
-				cout<<"Usted ha salido"<<endl;
+				string autor;
+				cout<<"Ingrese el autor que desea filtrar: ";
+				cin>>autor;
+				filtrar(Museo,autor);
 			}
 		}
 	}while(opc!=6);
@@ -171,29 +175,34 @@ int main(){
 }
 
 string generaId(vector<Arte> a){
-	char hexadecimales[16]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
-	char caracter;
-	string id="";	
-       	int a;
-	for(int i=0;i<6;i++){
-		a=rand()%16;
-		caracter=hexadecimales[a];
-		id+=a;
-	}
-	bool existeId=false;
-	for(int i=0;i<a.end();i++){
-		if(a[i].getID().compare(id)==0){
-			
+	bool existeID;
+	string id;
+	do{
+		char hexadecimales[16]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+		char caracter;
+		id="";	
+	       	int n;
+		for(int i=0;i<6;i++){
+			n=rand()%16;
+			caracter=hexadecimales[n];
+			id+=caracter;
 		}
-	}
+		existeID=false;
+		for(int i=0;i<a.size();i++){
+			if(a[i].getID().compare(id)==0){
+				existeID=true;
+			}
+		}
+	}while(existeID==true);
 	return id;
 }
 
-void filtrar(vector<Arte> a,string autor){
-	Arte arte;
-	for(int i=0;i<a.end();i++){
-		if(a[i].getAutor().compare(autor)==0){
-			cout<<
+void filtrar(vector<Arte> Museo,string autor){
+	Arte a;
+	for(int i=0;i<Museo.size();i++){
+		a=Museo[i];
+		if(Museo[i].getAutor().compare(autor)==0){
+			cout<<a.getID()<<","<<a.getNombre()<<","<<a.getAutor()<<","<<a.getFechaDeIngreso()<<endl;
 		}
 	}
 }
